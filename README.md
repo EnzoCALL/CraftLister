@@ -1,4 +1,5 @@
 Application permettant de créer des recettes de fabrication d'objets
+
 BDD: MongoDB
 
 -Pour créer une recette, l'utilisateur doit d'abord être connecté.
