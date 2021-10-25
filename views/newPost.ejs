@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/head') -%>
+    <body>
+        <!-- Navigation-->
+        <%- include('layouts/nav') -%>
+        <!-- Page Header-->
+        <%- include('layouts/header') -%>
+        <!-- Background-->
+        <%- include('layouts/land') -%>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Create your craft below! If your craft requires less than 5 materials, leave the form empty.</p>
+                        <div class="my-5">
+                            <form action="/api/posts" method="POST">
+                                <div class="form-floating">
+                                    <input class="form-control" id="title" name="title" type="text" placeholder="Enter the post title..."/>
+                                    <label for="title">Craft name</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content1" name="content1" placeholder="Enter the post content..." style="height: 4rem"></textarea>
+                                    <label for="body1">Materials required 1</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content2" name="content2" placeholder="Enter the post content..." style="height: 4rem"></textarea>
+                                    <label for="body2">Materials required 2</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content3" name="content3" placeholder="Enter the post content..." style="height: 4rem"></textarea>
+                                    <label for="body3">Materials required 3</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content4" name="content4" placeholder="Enter the post content..." style="height: 4rem"></textarea>
+                                    <label for="body4">Materials required 4</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="content5" name="content5" placeholder="Enter the post content..." style="height: 4rem"></textarea>
+                                    <label for="body5">Materials required 5</label>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Post new craft</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <%- include('layouts/footer') -%>
+        <%- include('layouts/scripts') -%>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

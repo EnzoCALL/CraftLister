@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/head') -%>
+    <body>
+        <!-- Navigation-->
+        <%- include('layouts/nav') -%>
+        <!-- Page Header-->
+        <%- include('layouts/header') -%>
+        <!-- Background-->
+        <%- include('layouts/land') -%>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                        <% posts.forEach( function({ id, title, content1, content2, content3, content4, content5, author, createdAt }) { %>
+                            <div class="post-preview">
+                                <a href="/posts/<%= id %>">
+                                    <h1 class="post-title"><%= title %></h1>
+                                    <h4 class="post-content">-<%= content1 %></h4>
+                                    <h4 class="post-content">-<%= content2 %></h4>
+                                    <h4 class="post-content">-<%= content3 %></h4>
+                                    <h4 class="post-content">-<%= content4 %></h4>
+                                    <h4 class="post-content">-<%= content5 %></h4>
+                                </a>
+                                <p class="post-meta">
+                                    Craft by
+                                    <a href="#!"><%= author %></a>
+                                    - <%= createdAt %>
+                                </p>
+                                <hr class="my-4" />
+                            </div>
+                        <% }); %> 
+                        
+                    
+                    <!-- Pager-->
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <%- include('layouts/footer') -%>
+        <%- include('layouts/scripts') -%>
+    </body>
+</html>
